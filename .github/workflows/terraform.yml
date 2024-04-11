@@ -16,7 +16,7 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v2
       with:
-        go-version: '1.16'  # Use the version of Go you're developing with
+          go-version: '1.22.0'  # Make sure this matches the version in go.mod
 
     - name: Build and package Lambda function
       run: |
