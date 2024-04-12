@@ -1,13 +1,16 @@
 variable "aws_region" {
-  description = "AWS region to deploy the resources into"
+  description = "AWS region"
   type        = string
   default     = "us-east-1"
 }
 
-variable "lambda_function_name" {
-  description = "The name of the Lambda function"
-  type        = string
-  default     = "MyGoLambdaFunction"
-}
-
-# Add more variables as needed
+# Optionally define these if you're not using environment variables or IAM roles
+# variable "aws_access_key" {
+#   description = "AWS access key"
+#   type        = string
+# }
+# 
+# variable "aws_secret_key" {
+#   description = "AWS secret key"
+#   type        = string
+# }
