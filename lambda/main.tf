@@ -19,6 +19,8 @@ resource "aws_lambda_function" "my_lambda" {
   runtime       = "go1.x"
   role          = aws_iam_role.lambda_exec_role.arn
 
-  filename         = "lambda/lambda_function.zip"
-  source_code_hash = filebase64sha256("lambda/lambda_function.zip")
+  filename         = "lambda_function.zip" # The path is relative to the working directory for Terraform commands
+  source_code_hash = filebase64sha256("lambda_function.zip")
+
+  # Other configurations like environment variables, memory, timeout, etc.
 }
